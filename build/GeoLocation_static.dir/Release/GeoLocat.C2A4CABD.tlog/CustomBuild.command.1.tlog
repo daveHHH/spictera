@@ -1,0 +1,10 @@
+^E:\WORK\GEOLOCATION-MASTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/work/GeoLocation-master -BE:/work/GeoLocation-master/build --check-stamp-file E:/work/GeoLocation-master/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
